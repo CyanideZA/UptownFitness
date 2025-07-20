@@ -434,7 +434,7 @@ header {
     margin-bottom: 0rem;
 }
 .video-wrapper {
-  max-height: 80vh;
+  max-height: 450px;
   /* Optional: maintain aspect ratio */
   position: relative;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
