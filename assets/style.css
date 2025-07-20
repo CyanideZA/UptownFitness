@@ -612,13 +612,19 @@ nav ul li a:hover {
     font-size: 1.6rem;
     font-weight: 800;
     text-decoration: none;
-    margin: 0.5rem auto 0 auto; /* top margin + horizontal centering */
+    margin: 0.5rem auto 0 auto;
     cursor: pointer;
     transition:
             transform 0.25s ease,
-            background-color 0.25s ease;
+            background-color 0.25s ease,
+            box-shadow 0.25s ease;
     transform-origin: center;
     max-width: 270px;
+
+    /* Removed for performance: */
+    /* backface-visibility: hidden; */
+    /* transform-style: preserve-3d; */
+    /* will-change: transform; */
 }
 
 .cta-button:hover {
