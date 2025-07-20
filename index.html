@@ -38,37 +38,36 @@
 </div>
 
 
-    <section id="home" class="hero">
-        <img src="assets/Images/Bkg1.png" alt="Hero Image">
-        <div class="hero-text">
-            <h2>UNLEASH YOUR INNER ATHLETE</h2>
-            <p>Train like a pro with our state-of-the-art facility and training protocols.</p>
-            <p>Actions speak louder than words, results are deafening.</p>
-            <a href="#contact-section" class="cta-button">Join the Movement!</a>
-        </div>
-    </section>
+<section id="home" class="hero">
+    <img src="assets/Images/Bkg1.png" alt="Hero Image">
+    <div class="hero-text">
+        <h2>UNLEASH YOUR INNER ATHLETE</h2>
+        <p>Train like a pro with our state-of-the-art facility and training protocols.</p>
+        <p>Actions speak louder than words, results are deafening.</p>
+        <a href="#contact-section" class="cta-button">Join the Movement!</a>
+    </div>
+</section>
 
-    <section id="about" class="hero">
-        <img src="assets/Images/Gym2.png" alt="About Background">
-        <div class="hero-text">
-            <h2>About Us</h2>
-            <p>Welcome to Uptown Fitness Center, your ultimate fitness destination. Whether you're a beginner or a
-                seasoned athlete, our team is here to help you achieve your goals with the best training in town!</p>
-        </div>
-    </section>
+<section id="about" class="hero">
+    <img src="assets/Images/Gym2.png" alt="About Background">
+    <div class="hero-text">
+        <h2>About Us</h2>
+        <p>Welcome to Uptown Fitness Center, your ultimate fitness destination. Whether you're a beginner or a
+            seasoned athlete, our team is here to help you achieve your goals with the best training in town!</p>
+    </div>
+</section>
 
-    <section id="news" class="section light-bg">
-        <div class="container">
-            <h2>Uptown News</h2>
+<section id="news" class="section light-bg">
+    <div class="container">
+        <h2>Uptown News</h2>
 
-            <img src="assets/Images/Promo7.png" alt="Friday Night Fights - Aquila Boxing Promotions"
-                 class="fight-banner-bkg"/>
-            <div class="fight-banner-container">
-                
-           <img src="assets/Images/PromoCard.jpg" alt="Friday Night Fights - Aquila Boxing Promotions"
-                 class="fight-banner-bkg"/>
-            <div class="fight-banner-container">
-                
+        <img src="assets/Images/Promo7.png" alt="Friday Night Fights - Aquila Boxing Promotions"
+             class="fight-banner-bkg"/>
+        <img src="assets/Images/PromoCard.jpg" alt="Friday Night Fights - Aquila Boxing Promotions"
+             class="fight-banner-bkg"/>
+
+        <div class="fight-banner-container">
+
                 <!-- Right Block: Donate -->
                 <div class="fight-banner">
                     <div class="donate-banner">
@@ -110,7 +109,7 @@
                 <div class="fight-banner">
                     <h3>Friday Night Fights</h3>
                     <h2><strong>Oumpie Sebeko brings the heat to take on IBO #1 Ranked Kanine Fourie</strong></h2>
-                        <p>
+                    <p>
                         01 August 2025 | 18:00 - 23:00 | Aquila Boxing Events <br> The Galleria, Sandton | South Africa
                     </p>
                     <div class="fight-buttons">
@@ -192,88 +191,88 @@
             <button id="closeBtn">Close</button>
             <button id="nextBtn">Next</button>
         </div>
-    </section>
+</section>
 
-    <script>
-      const newsPosts = document.querySelectorAll('#news .news-post');
-      const navBar = document.querySelector('#news .nav-bar');
-      let currentIndex = null;
+<script>
+  const newsPosts = document.querySelectorAll('#news .news-post');
+  const navBar = document.querySelector('#news .nav-bar');
+  let currentIndex = null;
 
-      function showExpanded(index) {
-        currentIndex = index;
-        newsPosts.forEach((post, i) => {
-          if (i === index) {
-            post.classList.add('expanded');
-            post.querySelector('.excerpt').style.display = 'none';
-            post.querySelector('.full-text').style.display = 'block';
-            post.style.zIndex = 1000;
-            post.style.opacity = 1;
-            post.style.pointerEvents = 'auto';
-          } else {
-            post.classList.remove('expanded');
-            post.style.opacity = 0;
-            post.style.pointerEvents = 'none';
-          }
-        });
-        navBar.style.display = 'flex';
+  function showExpanded(index) {
+    currentIndex = index;
+    newsPosts.forEach((post, i) => {
+      if (i === index) {
+        post.classList.add('expanded');
+        post.querySelector('.excerpt').style.display = 'none';
+        post.querySelector('.full-text').style.display = 'block';
+        post.style.zIndex = 1000;
+        post.style.opacity = 1;
+        post.style.pointerEvents = 'auto';
+      } else {
+        post.classList.remove('expanded');
+        post.style.opacity = 0;
+        post.style.pointerEvents = 'none';
       }
+    });
+    navBar.style.display = 'flex';
+  }
 
-      function closeExpanded() {
-        newsPosts.forEach(post => {
-          post.classList.remove('expanded');
-          post.style.opacity = 1;
-          post.style.pointerEvents = 'auto';
-          post.querySelector('.excerpt').style.display = 'block';
-          post.querySelector('.full-text').style.display = 'none';
-          post.style.zIndex = 1;
-        });
-        navBar.style.display = 'none';
-        currentIndex = null;
+  function closeExpanded() {
+    newsPosts.forEach(post => {
+      post.classList.remove('expanded');
+      post.style.opacity = 1;
+      post.style.pointerEvents = 'auto';
+      post.querySelector('.excerpt').style.display = 'block';
+      post.querySelector('.full-text').style.display = 'none';
+      post.style.zIndex = 1;
+    });
+    navBar.style.display = 'none';
+    currentIndex = null;
+  }
+
+  function showNext() {
+    if (currentIndex === null) return;
+    const nextIndex = (currentIndex + 1) % newsPosts.length;
+    showExpanded(nextIndex);
+  }
+
+  function showPrev() {
+    if (currentIndex === null) return;
+    const prevIndex = (currentIndex - 1 + newsPosts.length) % newsPosts.length;
+    showExpanded(prevIndex);
+  }
+
+  // Listeners
+  newsPosts.forEach((post, i) => {
+    post.querySelector('.toggle-btn').addEventListener('click', e => {
+      e.stopPropagation();
+      if (currentIndex === i) {
+        closeExpanded();
+      } else {
+        showExpanded(i);
       }
+    });
 
-      function showNext() {
-        if (currentIndex === null) return;
-        const nextIndex = (currentIndex + 1) % newsPosts.length;
-        showExpanded(nextIndex);
-      }
+    post.addEventListener('click', () => {
+      if (currentIndex === i) closeExpanded();
+    });
+  });
 
-      function showPrev() {
-        if (currentIndex === null) return;
-        const prevIndex = (currentIndex - 1 + newsPosts.length) % newsPosts.length;
-        showExpanded(prevIndex);
-      }
-
-      // Listeners
-      newsPosts.forEach((post, i) => {
-        post.querySelector('.toggle-btn').addEventListener('click', e => {
-          e.stopPropagation();
-          if (currentIndex === i) {
-            closeExpanded();
-          } else {
-            showExpanded(i);
-          }
-        });
-
-        post.addEventListener('click', () => {
-          if (currentIndex === i) closeExpanded();
-        });
-      });
-
-      document.getElementById('closeBtn').addEventListener('click', closeExpanded);
-      document.getElementById('nextBtn').addEventListener('click', showNext);
-      document.getElementById('prevBtn').addEventListener('click', showPrev);
-    </script>
+  document.getElementById('closeBtn').addEventListener('click', closeExpanded);
+  document.getElementById('nextBtn').addEventListener('click', showNext);
+  document.getElementById('prevBtn').addEventListener('click', showPrev);
+</script>
 
 
-    <section id="story" class="hero">
-        <img src="assets/Images/Gym1.png" alt="Story Background">
-        <div class="hero-text">
-            <h2>Our Story</h2>
-            <p>Uptown Fitness Center is your one-stop combat all-in-one fitness gym. We're dedicated to bringing you
-                ultimate fitness and wellbeing with a comprehensive range of services, and we're here to help you
-                achieve your goals.</p>
-        </div>
-    </section>
+<section id="story" class="hero">
+    <img src="assets/Images/Gym1.png" alt="Story Background">
+    <div class="hero-text">
+        <h2>Our Story</h2>
+        <p>Uptown Fitness Center is your one-stop combat all-in-one fitness gym. We're dedicated to bringing you
+            ultimate fitness and wellbeing with a comprehensive range of services, and we're here to help you
+            achieve your goals.</p>
+    </div>
+</section>
 
 <section id="gallery" class="section light-bg">
     <div class="container">
@@ -451,100 +450,100 @@
 </section>
 
 
-    <script>
-      // WhatsApp chat button functionality
-      document.getElementById('whatsappBtn').addEventListener('click', () => {
-        const phoneNumber = '27676035511';
-        const message = encodeURIComponent('Hello! I would like to get more information about Uptown Fitness Center.');
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-        window.open(whatsappUrl, '_blank');
+<script>
+  // WhatsApp chat button functionality
+  document.getElementById('whatsappBtn').addEventListener('click', () => {
+    const phoneNumber = '27676035511';
+    const message = encodeURIComponent('Hello! I would like to get more information about Uptown Fitness Center.');
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  });
+
+  // Form submission handler (simple alert for demo)
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Thank you for contacting us! We will get back to you soon.');
+    e.target.reset();
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.logo-wrapper').forEach(wrapper => {
+      const video = wrapper.querySelector('.animated-logo');
+      const staticLogo = wrapper.querySelector('.static-logo');
+
+      let isHovered = false;
+      let pendingFadeOut = false;
+
+      video.load();
+      video.pause();
+      video.currentTime = 0;
+
+      wrapper.addEventListener('mouseenter', () => {
+        isHovered = true;
+        pendingFadeOut = false;
+
+        staticLogo.style.opacity = '0';
+        video.style.opacity = '1';
+        video.loop = true;
+        video.play();
       });
 
-      // Form submission handler (simple alert for demo)
-      document.getElementById('contactForm').addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Thank you for contacting us! We will get back to you soon.');
-        e.target.reset();
+      wrapper.addEventListener('mouseleave', () => {
+        isHovered = false;
+        pendingFadeOut = true;
+        video.loop = false;
       });
-    </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        document.querySelectorAll('.logo-wrapper').forEach(wrapper => {
-          const video = wrapper.querySelector('.animated-logo');
-          const staticLogo = wrapper.querySelector('.static-logo');
-
-          let isHovered = false;
-          let pendingFadeOut = false;
-
-          video.load();
-          video.pause();
+      video.addEventListener('ended', () => {
+        if (pendingFadeOut && !isHovered) {
+          video.style.opacity = '0';
+          staticLogo.style.opacity = '1';
           video.currentTime = 0;
-
-          wrapper.addEventListener('mouseenter', () => {
-            isHovered = true;
-            pendingFadeOut = false;
-
-            staticLogo.style.opacity = '0';
-            video.style.opacity = '1';
-            video.loop = true;
-            video.play();
-          });
-
-          wrapper.addEventListener('mouseleave', () => {
-            isHovered = false;
-            pendingFadeOut = true;
-            video.loop = false;
-          });
-
-          video.addEventListener('ended', () => {
-            if (pendingFadeOut && !isHovered) {
-              video.style.opacity = '0';
-              staticLogo.style.opacity = '1';
-              video.currentTime = 0;
-              video.pause();
-            }
-          });
-        });
+          video.pause();
+        }
       });
-    </script>
+    });
+  });
+</script>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const galleryImages = document.querySelectorAll('.gallery-scroll img');
-        const modal = document.getElementById('galleryModal');
-        const modalImg = document.getElementById('modalImage');
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const galleryImages = document.querySelectorAll('.gallery-scroll img');
+    const modal = document.getElementById('galleryModal');
+    const modalImg = document.getElementById('modalImage');
 
-        galleryImages.forEach(img => {
-          img.addEventListener('click', () => {
-            modalImg.src = img.src;
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // prevent background scroll
-          });
-        });
-
-        modal.addEventListener('click', () => {
-          modal.style.display = 'none';
-          modalImg.src = '';
-          document.body.style.overflow = ''; // restore scroll
-        });
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // prevent background scroll
       });
+    });
 
-    </script>
+    modal.addEventListener('click', () => {
+      modal.style.display = 'none';
+      modalImg.src = '';
+      document.body.style.overflow = ''; // restore scroll
+    });
+  });
 
-    <!-- Modal for enlarged image -->
-    <div class="gallery-modal" id="galleryModal">
-        <img src="" alt="Enlarged Image" id="modalImage" />
+</script>
+
+<!-- Modal for enlarged image -->
+<div class="gallery-modal" id="galleryModal">
+    <img src="" alt="Enlarged Image" id="modalImage" />
+</div>
+
+
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Uptown Fitness Center 👑</p>
+        <p>Rights Reserved | Results Earned! </p>
     </div>
-
-
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Uptown Fitness Center 👑</p>
-            <p>Rights Reserved | Results Earned! </p>
-        </div>
-    </footer>
+</footer>
 </div>
 </body>
 </html>
