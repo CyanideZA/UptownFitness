@@ -96,8 +96,6 @@ html {
     text-decoration: none;
     border-radius: 8px;
     box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.4);
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
     will-change: transform;
 }
 
@@ -393,8 +391,6 @@ html {
             box-shadow 0.25s ease;
     transform-origin: center;
     will-change: transform;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
 }
 
 .review-btn:hover {
@@ -628,8 +624,6 @@ nav ul li a:hover {
             box-shadow 0.25s ease;
     transform-origin: center;
     will-change: transform;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
     max-width: 270px;
 }
 
@@ -717,8 +711,6 @@ footer .container {
     box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.4);
     transition: transform 0.3s ease;
     transition: box-shadow 0.2s ease;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
     will-change: transform;
 }
 
@@ -1154,8 +1146,6 @@ body {
             box-shadow 0.25s ease;
     transform-origin: center;
     will-change: transform;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
     box-shadow: 0 0 14px rgba(37, 211, 102, 0.3);
 }
 
