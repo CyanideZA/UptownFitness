@@ -86,7 +86,7 @@ html {
 }
 .fight-btn {
     display: inline-block;
-    width: 210px; /* Fixed width */
+    width: 210px;
     text-align: center;
     padding: 14px 28px;
     font-size: 1.5rem;
@@ -96,14 +96,14 @@ html {
     text-decoration: none;
     border-radius: 8px;
     box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.4);
+    transition: transform 0.25s ease, background-color 0.25s ease;
 }
-
-
 
 .fight-btn:hover {
     transform: scale(1.10);
-    background-color: #000000;
+    background-color: #111111; /* Slight variation to ensure transition triggers */
 }
+
 
 /* Container & grid */
 #news .news-grid {
@@ -373,7 +373,6 @@ html {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
-
 .review-btn {
     display: inline-block;
     padding: 12px 24px;
@@ -383,14 +382,14 @@ html {
     font-size: 1.5rem;
     text-decoration: none;
     border-radius: 8px;
-    transition:
-            transform 0.25s ease;
+    transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .review-btn:hover {
     background: linear-gradient(135deg, #f8da89, #ffaa00);
     transform: scale(1.05);
 }
+
 
 
 /* ========== Header ========== */
