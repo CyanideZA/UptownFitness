@@ -384,9 +384,7 @@ html {
     text-decoration: none;
     border-radius: 8px;
     transition:
-            transform 0.25s ease,
-            background-color 0.25s ease;
-    transform-origin: center;
+            transform 0.25s ease;
 }
 
 .review-btn:hover {
@@ -615,10 +613,7 @@ nav ul li a:hover {
     margin: 0.5rem auto 0 auto;
     cursor: pointer;
     transition:
-            transform 0.25s ease,
-            background-color 0.25s ease,
-            box-shadow 0.25s ease;
-    transform-origin: center;
+            transform 0.25s ease;
     max-width: 270px;
 
     /* Removed for performance: */
@@ -628,7 +623,7 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background: linear-gradient(135deg, #f8da89, #ffaa00);
+    background-color: #f8da89;
     transform: scale(1.05);
 }
 
@@ -1140,9 +1135,7 @@ body {
     text-decoration: none;
     font-weight: 900;
     transition:
-            transform 0.25s ease,
-            background-color 0.25s ease;
-    transform-origin: center;
+            transform 0.25s ease;
     box-shadow: 0 0 14px rgba(37, 211, 102, 0.3);
 }
 
