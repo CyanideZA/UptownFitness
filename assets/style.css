@@ -633,7 +633,7 @@ nav ul li a:hover {
     max-width: 270px;
 }
 
-.cta-button:Hover {
+.cta-button:hover {
     background: linear-gradient(135deg, #f8da89, #ffaa00);
     transform: scale(1.05);
 }
