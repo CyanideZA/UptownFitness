@@ -96,7 +96,6 @@ html {
     text-decoration: none;
     border-radius: 8px;
     box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.4);
-    will-change: transform;
 }
 
 
@@ -384,13 +383,10 @@ html {
     font-size: 1.5rem;
     text-decoration: none;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     transition:
             transform 0.25s ease,
-            background-color 0.25s ease,
-            box-shadow 0.25s ease;
+            background-color 0.25s ease;
     transform-origin: center;
-    will-change: transform;
 }
 
 .review-btn:hover {
@@ -620,10 +616,8 @@ nav ul li a:hover {
     cursor: pointer;
     transition:
             transform 0.25s ease,
-            background-color 0.25s ease,
-            box-shadow 0.25s ease;
+            background-color 0.25s ease;
     transform-origin: center;
-    will-change: transform;
     max-width: 270px;
 }
 
@@ -711,7 +705,6 @@ footer .container {
     box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.4);
     transition: transform 0.3s ease;
     transition: box-shadow 0.2s ease;
-    will-change: transform;
 }
 
 
@@ -1142,10 +1135,8 @@ body {
     font-weight: 900;
     transition:
             transform 0.25s ease,
-            background-color 0.25s ease,
-            box-shadow 0.25s ease;
+            background-color 0.25s ease;
     transform-origin: center;
-    will-change: transform;
     box-shadow: 0 0 14px rgba(37, 211, 102, 0.3);
 }
 
