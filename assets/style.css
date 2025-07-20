@@ -39,7 +39,7 @@ html {
     border-radius: 10px;
     text-align: center;
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.4);
 }
 
@@ -69,7 +69,6 @@ html {
     max-height: 800px;
     object-fit: contain;
     border-radius: 12px;
-    margin: 20px;
     position: relative;
     z-index: 1;
     box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.4);
