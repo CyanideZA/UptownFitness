@@ -381,7 +381,7 @@ html {
     font-weight: bold;
     font-size: 1.5rem;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 30px;
     transition: transform 0.25s ease, background 0.25s ease;
 }
 
