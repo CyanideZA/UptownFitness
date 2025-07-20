@@ -616,7 +616,7 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background-color: #f8da89;
+    background: linear-gradient(135deg, #f8da89, #ffaa00);
     transform: scale(1.05);
 }
 .hero#about img,
@@ -1136,7 +1136,7 @@ body {
 }
 
 .whatsapp-btn:hover {
-    background-color: #33e77a;
+    background: linear-gradient(135deg, #31b41e, #33e77a);
     transform: scale(1.05);
 }
 
