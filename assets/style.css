@@ -612,23 +612,14 @@ nav ul li a:hover {
     text-decoration: none;
     margin: 0.5rem auto 0 auto;
     cursor: pointer;
-    transition:
-            transform 0.25s ease;
+    transition: transform 0.25s ease, background-color 0.25s ease;
     max-width: 270px;
-
-    /* Removed for performance: */
-    /* backface-visibility: hidden; */
-    /* transform-style: preserve-3d; */
-    /* will-change: transform; */
 }
 
 .cta-button:hover {
     background-color: #f8da89;
     transform: scale(1.05);
 }
-
-
-
 .hero#about img,
 .hero#story img {
     filter: brightness(40%);
